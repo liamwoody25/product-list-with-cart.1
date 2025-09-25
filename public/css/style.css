@@ -40,7 +40,7 @@ p {
 .cart-btn-content {
   position: relative;
   bottom: 30px;
-  right: 6px;
+  left: 1px;
 }
 
 .cart-btn {
@@ -58,6 +58,7 @@ p {
   cursor: pointer;
   position: absolute;
   left: 85px;
+  box-shadow: 0px 3px 9px -6px black;
 }
 
 
@@ -121,6 +122,9 @@ body {
 }
 
 .container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 88%;
   margin: 24px;
 }
 
@@ -145,7 +149,7 @@ body {
 .item-card .product-img{
   border-radius: 8px;
   width: 100%;
-  box-shadow: 0px 1px 4px -1px black;
+  box-shadow: 3px 6px 8px -6px black;
 }
 
 
@@ -230,6 +234,7 @@ body {
   /**** body ****/
 
   .container {
+    width: 90%;
     margin: 40px;
   }
 
@@ -255,7 +260,7 @@ body {
     width: 100%;
     border-radius: 8px;
     display: block;
-    box-shadow: 0px 1px 4px -1px black;
+    box-shadow: 3px 6px 8px -6px black;
   }
 
   .card-text-content {
@@ -268,6 +273,7 @@ body {
   /**** cart-section ****/
 
   .cart-section {
+    width: 93%;
     margin-top: 24px;
   }
 
@@ -303,7 +309,7 @@ body {
 
   .container {
     margin: 88px 40px;
-    width: 934px;
+    width: 80%;
   }
 
   /***** body *****/
@@ -327,7 +333,7 @@ body {
     width: 100%;
     display: block;
     border-radius: 8px;
-    box-shadow: 0px 1px 4px -1px black;
+    box-shadow: 3px 6px 8px -6px black;
   }
 
   /***** cart-section *****/
