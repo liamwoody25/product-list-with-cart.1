@@ -13,13 +13,14 @@ function cartItem(){
     result > 0
   }
   
-  output.innerText = result
   if (cartButton) {
     imageCard.style.border = '2px solid #C73B0F'
     priceQuan.style.display = 'block'
   } else {
     cartButton.style.display = 'none';
   }
+
+  output.innerText = result
 }
 
 
@@ -31,7 +32,14 @@ function removeItem() {
     result = 0;
   }
 
-  output.innerText = result;
+  if (deleteBtn) {
+    priceQuan.style.display = 'none'
+    imageCard.style.border = 'none'
+  } else {
+    cartButton.style.display = 'flex'
+  }
+
+   output.innerText = result;
 }
 
 
