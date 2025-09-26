@@ -73,21 +73,21 @@ p {
   position: absolute;
   left: 83px;
   display: flex;
-  text-align: center;
   width: 138px;
   border-radius: 30px;
-  justify-content: space-around;
+  justify-content: space-between;
+  align-items: center;
+  height: 21px;
 }
 
 .delete-btn,
 .increase-btn {
   background-color:transparent;
-  border: 1px solid #fff;
+  border: none;
   padding: 0px;
   border-radius: 30px;
   color: transparent;
   cursor: pointer;
-  width: 22px;
 }
 
 .delete-btn:focus,
@@ -95,14 +95,16 @@ p {
   background-color: #fff;
 }
 
-.icon-increment:focus,
-.icon-decrement:focus {
-  color:#C73B0F;
+.bi-dash-circle:hover,
+.bi-plus-circle:hover{
+  background-color: #C73B0F;
 }
 
-.icon-decrement,
-.icon-increment {
-  width: 10px;
+
+.bi-plus-circle,
+.bi-dash-circle {
+  font-size: 20px;
+  color: #fff;
 }
 
 span {
@@ -227,7 +229,7 @@ body {
 
   .cart-btn-content {
     position: relative;
-    right: 60px;
+    left: -55px;
   }
 
   
@@ -302,7 +304,7 @@ body {
 
   .cart-btn-content {
     position: relative;
-    right: 30px;
+    left: 5px;
   }
   
   /***** body *****/
