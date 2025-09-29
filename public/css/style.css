@@ -310,6 +310,7 @@ body {
   /***** body *****/
 
   .container {
+    display: flex;
     margin: 88px 40px;
     width: 80%;
   }
