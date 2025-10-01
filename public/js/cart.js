@@ -16,12 +16,6 @@ function addCartItem() {
 
   output.innerText = result
   
-  if (cartSubmit) {
-    imageCard.style.border = '2px solid #C73B0F'
-    priceQuan.style.display = 'block'
-  } else {
-    priceQuan.style.display = 'none'
-  }
 }
 
 
@@ -38,20 +32,26 @@ function removeItem() {
 
   if (deleteBtn) {
     imageCard.style.border = 'none'
-    priceQuan = result
-    output.innerText = result;
+    result = 0
   }
 }
 
 
-cartSubmit.addEventListener('click', function(){
-  addCartItem()
-})
+// this is for the cart button
+  cartSubmit.addEventListener('click', function(){
+    addCartItem()
+    imageCard.style.border = '3px solid #C73B0F'
+    priceQuan.style.display = 'block'
+  })
 
+
+
+// this is the add button when the user wants to increase the quantity
 insertBtn.addEventListener('click', function(){
   addCartItem()
 })
 
+// this is the remove button when the user wants to remove an item
 deleteBtn.addEventListener('click', function(){
   removeItem()
 })
