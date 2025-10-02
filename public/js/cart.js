@@ -1,6 +1,6 @@
 const cartSubmit = document.querySelectorAll('.cart-btn');
 const imageCard = document.querySelector('.product-img')
-const priceQuan = document.querySelector('.quantity-content');
+const priceQuan = document.querySelectorAll('.quantity-content');
 const insertBtn = document.querySelector('.increase-btn');
 const deleteBtn = document.querySelector('.delete-btn');
 
