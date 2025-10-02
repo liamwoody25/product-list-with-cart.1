@@ -5,8 +5,8 @@ const insertBtn = document.querySelector('.increase-btn');
 const deleteBtn = document.querySelector('.delete-btn');
 
 
-// this function sends the items to the cart
-function addCartItem() {
+// this function sends the item to the cart
+function addProdutToCart() {
   const output = document.getElementById('output')
   const result = Number(output.innerText) + 1;
 
@@ -15,12 +15,17 @@ function addCartItem() {
   }
 
   output.innerText = result
+
+  if (cartSubmit) {
+    imageCard.style.border = '3px solid #C73B0F'
+    priceQuan.style.display = 'block'
+  }
   
 }
 
 
-// this function removes the items from the cart
-function removeItem() {
+// this function removes an item from the cart
+function removeQuatity() {
   const output = document.getElementById('output');
   const result = Number(output.innerText) - 1;
 
@@ -30,30 +35,30 @@ function removeItem() {
 
   output.innerText = result;
 
-  if (deleteBtn) {
+  if (result === 0) {
     imageCard.style.border = 'none'
-    result = 0
+    priceQuan.style.display = 'none'
+  } else {
+    
   }
 }
 
 
 // this is for the cart button
-  cartSubmit.addEventListener('click', function(){
-    addCartItem()
-    imageCard.style.border = '3px solid #C73B0F'
-    priceQuan.style.display = 'block'
-  })
+cartSubmit.addEventListener('click', function(){
+  addProdutToCart()
+})
 
 
 
 // this is the add button when the user wants to increase the quantity
 insertBtn.addEventListener('click', function(){
-  addCartItem()
+  addProdutToCart()
 })
 
 // this is the remove button when the user wants to remove an item
 deleteBtn.addEventListener('click', function(){
-  removeItem()
+  removeQuatity()
 })
 
 
