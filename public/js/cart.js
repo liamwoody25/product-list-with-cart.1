@@ -1,4 +1,4 @@
-const cartSubmit = document.querySelector('.cart-btn');
+const cartSubmit = document.querySelectorAll('.cart-btn');
 const imageCard = document.querySelector('.product-img')
 const priceQuan = document.querySelector('.quantity-content');
 const insertBtn = document.querySelector('.increase-btn');
@@ -16,11 +16,11 @@ function addProdutToCart() {
 
   output.innerText = result
 
-  if (cartSubmit) {
     imageCard.style.border = '3px solid #C73B0F'
-    priceQuan.style.display = 'block'
-  }
-  
+    
+    if (priceQuan) {
+      priceQuan.style.display = 'block'
+    }
 }
 
 
@@ -39,15 +39,18 @@ function removeQuatity() {
     imageCard.style.border = 'none'
     priceQuan.style.display = 'none'
   } else {
-    
-  }
+    }
+  
 }
 
 
 // this is for the cart button
-cartSubmit.addEventListener('click', function(){
-  addProdutToCart()
+cartSubmit.forEach(function(button){
+  button.addEventListener('click', function(){
+    addProdutToCart()
+  })
 })
+
 
 
 
@@ -57,9 +60,11 @@ insertBtn.addEventListener('click', function(){
 })
 
 // this is the remove button when the user wants to remove an item
-deleteBtn.addEventListener('click', function(){
-  removeQuatity()
-})
+
+  deleteBtn.addEventListener('click', function(){
+    removeQuatity()
+  })
+
 
 
  
